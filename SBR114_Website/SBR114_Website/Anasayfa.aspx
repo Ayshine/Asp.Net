@@ -10,11 +10,11 @@
 <body>
     <form id="form1" runat="server">
 
-            <asp:Table ID="Table1" runat="server" Width="100%" Height="1020px" BackColor="YellowGreen">
+            <asp:Table ID="Table1" runat="server" Width="100%" Height="1020px" BackColor="Gray">
 
                 <asp:TableRow runat="server" Width ="100%" Height="15%">
                     <asp:TableCell runat="server" Width="20%" Height="100%" HorizontalAlign="Left" VerticalAlign="Top">
-                    <img src="assets/kolibri.jpg" width="200px" height="200px" />
+                    <img src="assets/kolibri.jpg" width="300px" height="300px" />
                     </asp:TableCell>
                     <asp:TableCell runat="server" Width="60%" Height="100%" HorizontalAlign="Center" VerticalAlign="Top">
                         <asp:Label ID="Label1" runat="server" Text="Anasayfa" CssClass="anasayfa" />
