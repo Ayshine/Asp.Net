@@ -1,0 +1,16 @@
+﻿body {
+}
+.anasayfa{
+    font-size:48pt;
+    color:aqua;
+    font-weight:400;
+}
+
+.icerik {
+}
+
+.altyazi {
+    color:white;
+    font-size:small;
+    font-style:italic;
+}
