@@ -25,7 +25,10 @@
                 </asp:TableRow>
 
                 <asp:TableRow runat="server" Width="100%" Height="80%">
-                    <asp:TableCell runat="server"></asp:TableCell>
+                    <asp:TableCell runat="server">
+                        <asp:DropDownList ID="DropDownList1" runat="server"></asp:DropDownList>
+                        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+                    </asp:TableCell>
                     <asp:TableCell runat="server"></asp:TableCell>
                     <asp:TableCell runat="server"></asp:TableCell>
                 </asp:TableRow>
