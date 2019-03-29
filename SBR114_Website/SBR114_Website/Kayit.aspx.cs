@@ -30,5 +30,20 @@ namespace SBR114_Website
             txtPostaKodu.Text = "";
             txtTelNo.Text = "";
         }
+
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            int intValue = Convert.ToInt32(args.Value);
+
+            if (intValue % 2 == 0)
+            {
+                args.IsValid = true;
+            }
+            else
+            {
+                args.IsValid = false;
+
+            }
+        }
     }
 }

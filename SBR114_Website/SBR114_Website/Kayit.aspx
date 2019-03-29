@@ -5,6 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+
+    <script lang="javascript">
+        function ClientVal(sender, arguments)
+        {
+            var intValue = arguments.Value;
+            if (intValue % 2 == 0)
+            {
+                arguments.IsValid = true;
+                    
+            }
+            else
+            {
+                arguments.IsValid = false;
+                    
+            }
+        }
+    </script>
 </head>
 <body>
     <form id="form1" runat="server" method="post">
@@ -39,7 +56,11 @@
       </tr>
       <tr>
           <td>
-              <asp:Label ID="lblPostaKodu" runat="server" Text="Posta Kodu"></asp:Label></td>
+              <asp:Label ID="lblPostaKodu" runat="server" Text="Posta Kodu"></asp:Label>
+              <asp:CustomValidator ID="CustomValidator1" runat="server" ClientValidationFunction="ClientVal"
+                  ControlToValidate="txtPostaKodu" ErrorMessage="CustomValidator"
+                  OnServerValidate="CustomValidator1_ServerValidate">*</asp:CustomValidator>
+          </td>
           <td>
               <asp:TextBox ID="txtPostaKodu" runat="server"></asp:TextBox></td>
       </tr>
@@ -47,9 +68,17 @@
           <td>
               <asp:Label ID="lblEmail" runat="server" Text="Email"></asp:Label>
               <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Lütfen geçerli mail adresi yazınız." ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
+              <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtEmailTekrar" ControlToValidate="txtEmail" ErrorMessage="CompareValidator">*</asp:CompareValidator>
           </td>
           <td>
               <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox></td>
+      </tr>
+      <tr>
+          <td>
+              <asp:Label ID="lblEmailTekrar" runat="server" Text="Email Tekrar"></asp:Label>
+          </td>
+          <td>
+              <asp:TextBox ID="txtEmailTekrar" runat="server"></asp:TextBox></td>
       </tr>
       <tr>
           <td>
