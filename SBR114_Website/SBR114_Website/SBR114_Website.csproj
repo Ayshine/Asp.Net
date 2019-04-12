@@ -74,6 +74,7 @@
     <Content Include="Kayit.aspx" />
     <Content Include="result.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Yeni.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Anasayfa.aspx.cs">
@@ -97,6 +98,13 @@
     </Compile>
     <Compile Include="result.aspx.designer.cs">
       <DependentUpon>result.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yeni.aspx.cs">
+      <DependentUpon>Yeni.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yeni.aspx.designer.cs">
+      <DependentUpon>Yeni.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
